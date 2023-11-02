@@ -1,0 +1,40 @@
+logging:
+  level:
+    '[com.learning.bookcatalog]': TRACE
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 600000
+      idle-timeout: 6000000
+      max-lifetime: 18000000
+      maximum-pool-size: 10
+    url: jdbc:postgresql://localhost/book_catalog
+    username: test
+    password: test
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 100
+        order_inserts: true
+    show-sql: true
+app:
+  welcome-text: Default
+  timezone: Asia/Jakarta
+  currency: IDR
+cloud:
+  api-key: ${OneDrive}
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - development
+
+app:
+  welcome-text: Development

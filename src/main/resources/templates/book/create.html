@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	</head>
+	<body>
+		<h1>Insert Book</h1>
+		
+		<form method="POST" th:action="@{/books/create}" th:object="${bookCreateDTO}">
+			<table>
+				<tr>
+					<td>Title</td>
+					<td>:</td>
+					<td>
+						<input type="text" th:field="*{bookTitle}">
+						<div 
+							th:if="${#fields.hasErrors('bookTitle')}"
+							th:errors="*{bookTitle}">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Author Name</td>
+					<td>:</td>
+					<td>
+						<input type="text" th:field="*{authorName}">
+						<div 
+							th:if="${#fields.hasErrors('authorName')}"
+							th:errors="*{authorName}">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>:</td>
+					<td><textarea rows="5" cols="21" th:field="*{description}"></textarea></td>
+				</tr>
+				<tr>
+					<td>
+						<button type="submit">Insert Book</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
