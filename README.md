@@ -1,5 +1,3 @@
-![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png)
-
 # Book Catalog
 > Manage books with this restful API
 
