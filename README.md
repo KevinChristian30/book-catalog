@@ -1,9 +1,6 @@
 # Book Catalog
 > Manage books with this restful API
 
-A brief description of your project, what it is used for and how does life get
-awesome when someone starts to use it.
-
 This is a simple Java Spring Boot project to learn about Spring Boot. This project implements authentication with Spring Security and implements spring boot's best practices with sevice and repository pattern. This project also uses hibernate as the ORM and Postgre SQL as the database.
 
 ## Installing / Getting started
